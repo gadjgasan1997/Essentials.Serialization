@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{82861D81-FCFF-4E53-960B-832CBBA85EE6}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "solutionItems", "solutionItems", "{DE3C3618-C314-4F61-8EFB-45458C34FADA}"
+	ProjectSection(SolutionItems) = preProject
+		.gitignore = .gitignore
+		nuget.config = nuget.config
+		.idea\.idea.Essentials.Serialization\.idea\workspace.xml = .idea\.idea.Essentials.Serialization\.idea\workspace.xml
+	EndProjectSection
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "publish", "publish", "{8D915ED5-6FE4-47F9-AB75-A3F15E7F3E0A}"
+	ProjectSection(SolutionItems) = preProject
+		publish\publish.cmd = publish\publish.cmd
+		publish\settings.cmd = publish\settings.cmd
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Essentials.Serialization.Core", "src\Essentials.Serialization.Core\Essentials.Serialization.Core.csproj", "{534ACA00-7D9F-435A-8C9C-FDFA2631B3AA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{534ACA00-7D9F-435A-8C9C-FDFA2631B3AA} = {82861D81-FCFF-4E53-960B-832CBBA85EE6}
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{534ACA00-7D9F-435A-8C9C-FDFA2631B3AA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{534ACA00-7D9F-435A-8C9C-FDFA2631B3AA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{534ACA00-7D9F-435A-8C9C-FDFA2631B3AA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{534ACA00-7D9F-435A-8C9C-FDFA2631B3AA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

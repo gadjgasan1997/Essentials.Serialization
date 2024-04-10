@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="556615f7-e022-4b78-8c49-65e2cadf9f2c" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.idea.Essentials.Serialization/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.idea.Essentials.Serialization/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.idea.Essentials.Serialization/.idea/material_theme_project_new.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.idea.Essentials.Serialization/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Essentials.Serialization.sln" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Essentials.Serialization.sln.DotSettings" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Essentials.Serialization.sln.DotSettings.user" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/nuget.config" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/publish/publish.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/publish/settings.cmd" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Essentials.Serialization.Core/DeserializerKey.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Essentials.Serialization.Core/Deserializers/NativeJsonDeserializer.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Essentials.Serialization.Core/Deserializers/NewtonsoftJsonDeserializer.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Essentials.Serialization.Core/Deserializers/XmlDeserializer.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Essentials.Serialization.Core/Essentials.Serialization.Core.csproj" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Essentials.Serialization.Core/EssentialsDeserializersFactory.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Essentials.Serialization.Core/EssentialsSerializersFactory.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Essentials.Serialization.Core/Exceptions/DeserializerNotFoundException.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Essentials.Serialization.Core/Exceptions/SerializerNotFoundException.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Essentials.Serialization.Core/Extensions/EssentialsDeserializerExtensions.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Essentials.Serialization.Core/Helpers/JsonHelpers.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Essentials.Serialization.Core/IEssentialsDeserializer.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Essentials.Serialization.Core/IEssentialsSerializer.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Essentials.Serialization.Core/SerializerKey.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Essentials.Serialization.Core/Serializers/NativeJsonSerializer.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Essentials.Serialization.Core/Serializers/NewtonsoftJsonSerializer.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/Essentials.Serialization.Core/Serializers/XmlSerializer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ChangesViewManager" show_ignored="true">
+    <option name="groupingKeys">
+      <option value="directory" />
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "gadjgasan1997"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/gadjgasan1997/Essentials.Serialization.git",
+    "accountId": "1660a570-f201-4aec-962c-74e3eb60abe1"
+  }
+}]]></component>
+  <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="Toolset" />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 2
+}]]></component>
+  <component name="ProjectId" id="2euuc1dc4pQJcoGoZmJWhprMHPH" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ASKED_SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "git-widget-placeholder": "develop",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
+  },
+  "keyToStringList": {
+    "rider.external.source.directories": [
+      "C:\\Users\\gadjg\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\DecompilerCache",
+      "C:\\Users\\gadjg\\AppData\\Roaming\\JetBrains\\Rider2024.1\\resharper-host\\SourcesCache",
+      "C:\\Users\\gadjg\\AppData\\Local\\Symbols\\src"
+    ]
+  }
+}]]></component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="556615f7-e022-4b78-8c49-65e2cadf9f2c" name="Changes" comment="" />
+      <created>1712766859935</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1712766859935</updated>
+      <workItem from="1712766861584" duration="345000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
+  <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
+  <component name="VcsManagerConfiguration">
+    <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+  </component>
+</project>
