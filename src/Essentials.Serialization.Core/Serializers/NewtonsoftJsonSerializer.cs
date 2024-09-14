@@ -1,6 +1,7 @@
 ﻿using System.Text;
 using Newtonsoft.Json;
 using Essentials.Utils.Extensions;
+using Essentials.Serialization.Serializers.Abstractions;
 // ReSharper disable MemberCanBePrivate.Global
 
 namespace Essentials.Serialization.Serializers;
@@ -8,7 +9,7 @@ namespace Essentials.Serialization.Serializers;
 /// <summary>
 /// Сериалайзер Json, использующий Newtonsoft.Json
 /// </summary>
-public class NewtonsoftJsonSerializer : IEssentialsSerializer
+public class NewtonsoftJsonSerializer : BaseEssentialsSerializer
 {
     /// <summary>
     /// Опции сериализации
@@ -27,12 +28,12 @@ public class NewtonsoftJsonSerializer : IEssentialsSerializer
         };
     }
 
-    /// <inheritdoc cref="IEssentialsSerializer.Serialize{T}" />
-    public byte[] Serialize<T>(T input)
+    /// <inheritdoc cref="IEssentialsSerializer.Serialize(Type, object)" />
+    public override byte[] Serialize(Type type, object input)
     {
         input.CheckNotNull("Не передан объект для сериализации");
 
-        var data = JsonConvert.SerializeObject(input, SerializeOptions);
+        var data = JsonConvert.SerializeObject(input, type, SerializeOptions);
         data.CheckNotNullOrEmpty("Строка после сериализации пуста");
         
         return Encoding.UTF8.GetBytes(data);

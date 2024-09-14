@@ -2,7 +2,7 @@
 using System.Xml;
 using Essentials.Utils.Extensions;
 using Essentials.Utils.IO.Writers;
-
+using Essentials.Serialization.Serializers.Abstractions;
 // ReSharper disable MemberCanBePrivate.Global
 
 namespace Essentials.Serialization.Serializers;
@@ -10,10 +10,10 @@ namespace Essentials.Serialization.Serializers;
 /// <summary>
 /// Сериалайзер Xml
 /// </summary>
-public class XmlSerializer : IEssentialsSerializer
+public class XmlSerializer : BaseEssentialsSerializer
 {
     /// <summary>
-    /// Опции серилизации
+    /// Опции сериализации
     /// </summary>
     protected XmlWriterSettings SerializeOptions { get; }
     
@@ -39,15 +39,16 @@ public class XmlSerializer : IEssentialsSerializer
         };
     }
     
-    /// <inheritdoc cref="IEssentialsSerializer.Serialize{T}" />
-    public byte[] Serialize<T>(T input)
+    /// <inheritdoc cref="IEssentialsSerializer.Serialize(Type, object)" />
+    public override byte[] Serialize(Type type, object input)
     {
         using var stringWriter = new StringWriterWithEncoding(Encoding);
         using var writer = XmlWriter.Create(stringWriter, SerializeOptions);
-        var xmlSerializer = new System.Xml.Serialization.XmlSerializer(typeof(T));
+        var xmlSerializer = new System.Xml.Serialization.XmlSerializer(type);
 
         xmlSerializer.Serialize(writer, input);
-        var resultString = stringWriter.ToString().CheckNotNullOrEmpty("Строка пуста после сериализации в Xml");
+        var resultString = stringWriter.ToString();
+        resultString.CheckNotNullOrEmpty("Строка пуста после сериализации в Xml");
 
         return Encoding.GetBytes(resultString);
     }

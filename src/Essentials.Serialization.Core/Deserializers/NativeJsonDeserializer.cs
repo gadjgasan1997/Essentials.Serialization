@@ -1,4 +1,5 @@
 ﻿using System.Text.Json;
+using Essentials.Serialization.Deserializers.Abstractions;
 // ReSharper disable MemberCanBeProtected.Global
 // ReSharper disable MemberCanBePrivate.Global
 
@@ -7,7 +8,7 @@ namespace Essentials.Serialization.Deserializers;
 /// <summary>
 /// Десериалайзер, использующий System.Text.Json
 /// </summary>
-public class NativeJsonDeserializer : IEssentialsDeserializer
+public class NativeJsonDeserializer : BaseEssentialsDeserializer
 {
     /// <summary>
     /// Опции десериализации
@@ -26,9 +27,7 @@ public class NativeJsonDeserializer : IEssentialsDeserializer
         };
     }
     
-    /// <inheritdoc cref="IEssentialsDeserializer.Deserialize{T}(ReadOnlySpan{byte})" />
-    public T? Deserialize<T>(ReadOnlySpan<byte> data) => JsonSerializer.Deserialize<T>(data, DeserializeOptions);
-
-    /// <inheritdoc cref="IEssentialsDeserializer.Deserialize{T}(ReadOnlyMemory{byte})" />
-    public T? Deserialize<T>(ReadOnlyMemory<byte> data) => Deserialize<T>(data.Span);
+    /// <inheritdoc cref="IEssentialsDeserializer.Deserialize(Type, ReadOnlySpan{byte})" />
+    public override object? Deserialize(Type type, ReadOnlySpan<byte> data) =>
+        JsonSerializer.Deserialize(data, type, DeserializeOptions);
 }

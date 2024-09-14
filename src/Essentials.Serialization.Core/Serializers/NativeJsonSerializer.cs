@@ -1,6 +1,6 @@
 ﻿using System.Text.Json;
 using Essentials.Utils.Extensions;
-
+using Essentials.Serialization.Serializers.Abstractions;
 // ReSharper disable MemberCanBePrivate.Global
 
 namespace Essentials.Serialization.Serializers;
@@ -8,7 +8,7 @@ namespace Essentials.Serialization.Serializers;
 /// <summary>
 /// Сериалайзер Json, использующий System.Text.Json
 /// </summary>
-public class NativeJsonSerializer : IEssentialsSerializer
+public class NativeJsonSerializer : BaseEssentialsSerializer
 {
     /// <summary>
     /// Опции сериализации
@@ -24,11 +24,11 @@ public class NativeJsonSerializer : IEssentialsSerializer
         SerializeOptions = serializeOptions ?? new JsonSerializerOptions();
     }
 
-    /// <inheritdoc cref="IEssentialsSerializer.Serialize{T}" />
-    public byte[] Serialize<T>(T input)
+    /// <inheritdoc cref="IEssentialsSerializer.Serialize(Type, object)" />
+    public override byte[] Serialize(Type type, object input)
     {
         input.CheckNotNull("Не передан объект для сериализации");
         
-        return JsonSerializer.SerializeToUtf8Bytes(input, SerializeOptions);
+        return JsonSerializer.SerializeToUtf8Bytes(input, type, SerializeOptions);
     }
 }

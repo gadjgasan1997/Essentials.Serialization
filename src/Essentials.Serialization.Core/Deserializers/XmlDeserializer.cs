@@ -1,5 +1,6 @@
 ﻿using System.Xml;
 using Essentials.Utils.Extensions;
+using Essentials.Serialization.Deserializers.Abstractions;
 // ReSharper disable MemberCanBePrivate.Global
 
 namespace Essentials.Serialization.Deserializers;
@@ -7,7 +8,7 @@ namespace Essentials.Serialization.Deserializers;
 /// <summary>
 /// Десериалайзер Xml
 /// </summary>
-public class XmlDeserializer : IEssentialsDeserializer
+public class XmlDeserializer : BaseEssentialsDeserializer
 {
     /// <summary>
     /// Опции десериализации
@@ -22,19 +23,17 @@ public class XmlDeserializer : IEssentialsDeserializer
     {
         DeserializeOptions = deserializeOptions ?? new XmlReaderSettings();
     }
-    
-    /// <inheritdoc cref="IEssentialsDeserializer.Deserialize{T}(ReadOnlySpan{byte})" />
-    public T? Deserialize<T>(ReadOnlySpan<byte> data)
+
+    /// <inheritdoc cref="IEssentialsDeserializer.Deserialize(Type, ReadOnlySpan{byte})" />
+    public override object? Deserialize(Type type, ReadOnlySpan<byte> data)
     {
         using var stream = new MemoryStream(data.ToArray());
         using var reader = XmlReader.Create(stream, DeserializeOptions);
         
-        var xmlSerializer = new System.Xml.Serialization.XmlSerializer(typeof(T));
-        var result = xmlSerializer.Deserialize(reader).CheckNotNull("Объект null после десериализации из Xml");
+        var xmlSerializer = new System.Xml.Serialization.XmlSerializer(type);
+        var result = xmlSerializer.Deserialize(reader);
+        result.CheckNotNull("Объект null после десериализации из Xml");
 
-        return (T?) result;
+        return result;
     }
-
-    /// <inheritdoc cref="IEssentialsDeserializer.Deserialize{T}(ReadOnlyMemory{byte})" />
-    public T? Deserialize<T>(ReadOnlyMemory<byte> data) => Deserialize<T>(data.Span);
 }
